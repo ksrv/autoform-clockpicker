@@ -1,0 +1,15 @@
+<template name="ksrvClockpicker">
+  <div class="input-group clockpicker">
+    {{#if this.atts.iconLeft}}{{>ksrvClockpickerIcon icon=this.atts.iconLeft}}{{/if}}
+    {{>ksrvClockpickerInput}}
+    {{#if this.atts.iconRight}}{{>ksrvClockpickerIcon icon=this.atts.iconRight}}{{/if}}
+  </div>
+</template>
+
+<template name="ksrvClockpickerIcon">
+  <span class="input-group-addon"><i class="{{icon}}"></i></span>    
+</template>
+
+<template name="ksrvClockpickerInput">
+  <input class="form-control" type="text" value="{{this.value}}" {{atts}}/>
+</template>
